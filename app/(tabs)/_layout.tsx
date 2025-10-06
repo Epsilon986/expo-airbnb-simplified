@@ -22,8 +22,8 @@ export default function RootLayout() {
         },
       })}
     >
-      <Tabs.Screen name="list" options={{ title: "Liste" }} />
-      <Tabs.Screen name="profile" options={{ title: "Profil" }} />
+      <Tabs.Screen name="list" options={{ title: "Liste",  }} />
+      <Tabs.Screen name="profile" options={{ title: "Profil" }}  />
     </Tabs>
   );
 }

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import {
-    Alert,
-    Button,
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Alert,
+  Button,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 export default function Profile() {
@@ -45,7 +45,7 @@ export default function Profile() {
       {/* Avatar */}
       <TouchableOpacity onPress={handleAvatarChange}>
         <Image source={{ uri: user.avatar }} style={styles.avatar} />
-        <Text style={styles.changePhoto}>Change Photo</Text>
+        <Text style={styles.changePhoto}>Changer de Photo</Text>
       </TouchableOpacity>
 
       {/* Editable Fields */}
@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
     backgroundColor: "#fff",
+    flexGrow: 1,
   },
   avatar: {
     width: 120,

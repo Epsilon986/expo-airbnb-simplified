@@ -1,9 +1,29 @@
-import { Stack } from "expo-router";
+import { Drawer } from 'expo-router/drawer';
 
-export default function ProfileLayout() {
+export default function Layout() {
   return (
-    <Stack screenOptions={{ headerShown: true }}>
-      <Stack.Screen name="profile" options={{ title: "Profil utilisateur" }} />
-    </Stack>
+    <Drawer>
+      <Drawer.Screen
+        name="index" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: 'Profile',
+          title: 'Mon profil',
+        }}
+      />
+      <Drawer.Screen
+        name="settings" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: 'Settings',
+          title: 'Paramètres',
+        }}
+      />
+      <Drawer.Screen
+        name="help" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: 'Help',
+          title: 'Aide',
+        }}
+      />
+    </Drawer>
   );
 }
