@@ -54,14 +54,12 @@ function ListLocations() {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) => (
                   <Pressable onPress={() => showDetails(item.name, item.price, `https://picsum.photos/400/200?random=${item.price/100}`)} style={({pressed}) => [{backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white',}, styles.locationTile]}>
-                    <View>
                       <Image source={{ uri: `https://picsum.photos/400/200?random=${item.price/100}` }} 
                           style={styles.locationImage} resizeMode="cover"/>
                         <View>
                           <Text style={styles.locationName}>{item.name}</Text>
                           <Text style={styles.locationPrice}>{item.price}€</Text>
                         </View>
-                  </View>
                   </Pressable>
                 )}
             /* <FlatList
@@ -169,6 +167,7 @@ const styles = StyleSheet.create({
     height: 50,
     marginRight: 8,
     alignContent: 'flex-start',
+    borderRadius: 8,
   },
 
 });
